@@ -1,0 +1,76 @@
+:root
+{
+	--boxColor: #77f;
+	--boxHighlight: #aaf;
+	--boxWidth: 5em;
+	--boxX: 0;
+}
+.accountButton
+{
+	position: fixed;
+	top: 1.15em;
+	right: calc(var(--boxX));
+	z-index: 2;
+	width: calc(var(--boxWidth)/2 + 1.4em);
+	height: 1.4em;
+	border-radius: 1.4em 1.4em;
+
+	background-color: var(--boxColor);
+}
+
+.accountButton a
+{
+	position: relative;
+	top: 0.1em;
+	left: 0.5em;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+#LoginArea
+{
+	position: relative;
+	top: 0.5em;
+	right: 9em;
+}
+
+#LoginSubmit
+{
+	padding: 0 100%;
+	color: #fff;
+	font-size: 0.8em;
+	border: none;
+	border-radius: 1em;
+	background-color: #77f;
+}
+
+#LoginArea > table
+{
+	padding: 0.2em;
+	border-radius: 0.3em;
+	background-color: #fff;
+	box-shadow: 0.02em 0.1em 0.2em #ddd;
+}
+
+.accountName
+{
+	position: absolute;
+	top: 1.15em;
+	right: 13.0em;
+	z-index: 2;
+}
+
+.accountName:before
+{
+	position: fixed;
+	content: '';
+	width: 0;
+	height: 0;
+	top: 1.5em;
+	left: calc(100% - 12em);
+	border-left: 0.25em solid transparent;
+	border-right: 0.25em solid transparent;
+	border-top: 0.5em solid #000;
+}

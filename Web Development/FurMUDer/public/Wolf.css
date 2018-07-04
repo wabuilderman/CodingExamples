@@ -1,0 +1,72 @@
+@keyframes slidingWolf_bar
+{
+  from
+  {
+    height: 100%;
+  }
+  to
+  {
+    height: 0%;
+  }
+}
+
+@keyframes pulsatingWolf
+{
+  from
+  {
+    top: calc(50vh - var(--wolfSize)/2);
+    left: calc(50vw - var(--wolfSize)/2);
+    height: var(--wolfSize);
+    width: var(--wolfSize);
+  }
+  to
+  {
+    top: calc(50vh - var(--wolfSize)*1.1/2);
+    left: calc(50vw - var(--wolfSize)*1.1/2);
+    height: calc(var(--wolfSize)*1.1);
+    width: calc(var(--wolfSize)*1.1);
+  }
+}
+
+:root
+{
+  --wolfSize: 50vh;
+}
+
+/* Adjust loading icon size according to aspect ratio */
+@media (max-width: 100vh){:root {--wolfSize: 50vw; }}
+
+#Loading_Wolf::after
+{
+  top: 100px;
+  left: calc(50vw - var(--wolfSize)/2);
+  width: var(--wolfSize);
+  height: var(--wolfSize);
+  border-radius: 50%;
+  background: #ff0;
+}
+
+#Loading_Wolf
+{
+  top: calc(50vh - var(--wolfSize)/2);
+  left: calc(50vw - var(--wolfSize)/2);
+  width: var(--wolfSize);
+  height: var(--wolfSize);
+  border-radius: 50%;
+  background: #ff0;
+  
+  animation: pulsatingWolf 0.5s infinite alternate ease-in-out;
+}
+
+.svg-Loading_Wolf > #wolf_fill_bottom
+{
+  fill:#4f4;
+  opacity:0.0;
+  mix-blend-mode: multiply;
+}
+.svg-Loading_Wolf > #wolf_fill_top
+{
+  fill:#4f4;
+  mix-blend-mode: multiply;
+  animation: slidingWolf_bar 3s infinite alternate ease-in-out;
+}

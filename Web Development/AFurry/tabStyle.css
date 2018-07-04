@@ -1,0 +1,45 @@
+.tab {
+	background-color: #fff;
+	width: calc(100% + 1em);
+	height: 3em;
+	box-shadow: 0 0.1em 0.1em #ccc;
+	overflow: hidden;
+	left: -1em;
+	padding-left: 1em;
+	padding-top: 1em;
+	padding-bottom: 0.2em;
+	top: -0.5em;
+}
+
+.tab button {
+	font-size: 1em;
+	transform: skew(-10deg) translate(2em, 0);
+	border-radius: 5%;
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 0.875em 1em;
+	transition: 0.3s;
+}
+.tab button:hover {
+	background-color: #ddd;
+}
+.tab button.active {
+	background-color: #ccc;
+}
+.tabcontent {
+	display: none;
+	padding: 0.375em 0.75em;
+	border: none;
+	border-top: none;
+}
+.tabcontent {
+	animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}

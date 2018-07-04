@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="Room.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="messageScript.js"></script>
+    <script>LoadRoom();
+            //setInterval(function(){
+            //    UpdateRoom();
+            //  }, 1000);</script>
+    <div id="MESSAGE_PROTOTYPE" class="Message_Body">
+      <table>
+        <tr>
+          <td>
+            <img src="https://i.pinimg.com/originals/d8/8c/c2/d88cc2788becfee936955d35b6d218f7.jpg"> </img>
+          </td>
+          <td>
+            <p> This is some example message.</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </head>
+  <title>FurMUDer</title>
+  <body>
+    <!-- Message Area -->
+    <div id="Lastest_Message"></div>
+    
+    <!-- Text Entry Area -->
+    <div>
+      <textarea 
+        id="Text_Entry_Box"
+        name="note"
+        onkeypress="return sumbitTextbox(event)"
+      ></textarea>
+    </div>
+  </body>
+</html>

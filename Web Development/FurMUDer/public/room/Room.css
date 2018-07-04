@@ -1,0 +1,50 @@
+body
+{
+  background-color: #fff;
+}
+
+.Message_Body img
+{
+  width: 3em;
+  height: 3em;
+  position: relative;
+  left: -0.7em;
+  top: 0.2em;
+}
+
+.Message_Body p
+{
+  color:#fff;
+  width: 20em;
+  font-weight: bold;
+  font-size: large;
+}
+
+.Message_Body table
+{
+  background: #444;
+  padding-top: 0.5em;
+  padding-left:1.5em;
+  padding-bottom:0.5em;
+  padding-right:1.5em;
+  border-radius: 0.8em 0.8em;
+}
+
+#Enter_Button
+{
+  width: 5em;
+  height: 3em;
+}
+
+#Text_Entry_Box
+{
+  position:fixed;
+  resize: none;
+  background: #ddd;
+  color: #000;
+  font-size: 1.5em;
+  top: calc(100% - 3.45em);
+  left: 0;
+  height: 3em;
+  width: 100%;
+}
